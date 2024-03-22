@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <!--Sobre mi, o sea about me XD-->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="../../assets/YOMERENGESJAJAJA.PNG" alt="Foto Perfil" width="256" height="256" class="rounded-circle">
+                <p>¡Hola! Soy José Valenzuela, un entusiasta de la programación y las tecnologías de la información, especializado en el desarrollo de software multiplataforma. Actualmente estoy cursando mis estudios en la Universidad Tecnológica del Sur de Sonora (UTS), donde me sumerjo en el fascinante mundo de la informática y la programación.</p>
+            </div>
+        </div>
+        <!--Project Destacado-->
+
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Proyecto Destacado</h2>
+                <h4>{{featuredProject.name}}</h4>
+            </div>
+            
+            <carousel>
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide><img src="{{picture}}" alt="slide" style="display: block; width: 100%;"></slide>
+                </div>
+            </carousel>
+
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>Este es mi proyecto más destacado</p>
+        </div>
+    </div>
+    <!-- Skills -->
+    <div class="text-center m-3">
+        <h2 class="mb-4">Skills</h2>
+        <div class="skill-container">
+            <img src="https://i.ibb.co/Gt6mRZd/html-5.png" alt="html-5" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="HTML5">
+            <img src="https://i.ibb.co/nq2cTvx/css-3.png" alt="css" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="CSS3">
+            <img src="https://i.ibb.co/DL7NcwM/csharp.png" alt="chsarp" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="C#">
+            <img src="https://i.ibb.co/V33yf70/servidor-sql.png" alt="servidor-sql" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="SQL Server">
+            <img src="https://i.ibb.co/8xZwtsT/mongodb.png" alt="mongodb" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="MongoDB">
+            <img src="https://i.ibb.co/p1cLJQh/angular.png" alt="agular" border="0" style="display: inline-block; width: 60px;" class="mr-3" data-toggle="tooltip" data-placement="top" title="Angular">
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+<div class="container text-center mt-5">
+    <h2>Contacto</h2>
+    <p>¡No dudes en ponerte en contacto conmigo!</p>
+    <p>Correo electrónico: <a href="mailto:josevalenzuela5322100338@correcaminos.uts.edu.mx">josevalenzuela5322100338@correcaminos.uts.edu.mx</a></p>
+</div>
+</body>
+</html>

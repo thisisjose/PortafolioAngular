@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.refresh-button {
+    background-color: darkgreen; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.refresh-button:hover {
+    background-color: darkgray; /* Verde más oscuro */
+}
+
+.cat-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh; /* Es el q mueve más arriba más abajo */
+}
+
+.cat-image {
+    border-radius: 15px;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.3);
+}
